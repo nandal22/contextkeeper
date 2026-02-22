@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+.DS_Store
+
+# Ignore testing contexts unless testing
+.contextkeeper/
+
+# Ignore vscode extension builds
+vscode-extension/node_modules/
+vscode-extension/out/
+vscode-extension/dist/
+*.vsix

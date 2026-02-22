@@ -1,0 +1,52 @@
+{
+    "name": "contextkeeper-vscode",
+    "displayName": "ContextKeeper",
+    "description": "Persistent AI coding context by feature — auto-resume on workspace open",
+    "version": "1.0.0",
+    "publisher": "ContextKeeper",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ContextKeeper/contextkeeper"
+    },
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./dist/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "contextkeeper.save",
+                "title": "ContextKeeper: Save Context"
+            },
+            {
+                "command": "contextkeeper.resume",
+                "title": "ContextKeeper: Resume Context"
+            },
+            {
+                "command": "contextkeeper.log",
+                "title": "ContextKeeper: View Log"
+            },
+            {
+                "command": "contextkeeper.diff",
+                "title": "ContextKeeper: Show Diff"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.85.0",
+        "@types/node": "^22.0.0",
+        "typescript": "^5.6.0"
+    }
+}
